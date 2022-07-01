@@ -1,0 +1,10 @@
+digraph ClassDiagram {
+	node [shape = "record"]
+	"main.Boss" [label = "{main.Boss|-name : String\n-surname : String\n-address : String\n+salary : double}"];
+	"main.Code" [label = "{main.Code|-name : String\n-hours : float}"];
+	"main.Employee" [label = "{main.Employee|-name : String\n-surname : String\n-birthDate : Date}"];
+	"main.Proyect" [label = "{main.Proyect|+manager : Boss}"];
+	"main.Employee" -> "main.Boss" [ label = "answersTo" ];
+	"main.Employee" -> "main.Proyect" [ label = "worksIn" ];
+	"main.Code" -> "main.Proyect" [ label = "partOf" ];
+}
